@@ -21,19 +21,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyApplicationTheme {
-                // Kita panggil fungsi baru di sini, bukan Scaffold atau Greeting lagi
                 TampilanDataMahasiswa(
-                    nim = "245150400111056",    // <-- GANTI DENGAN NIM ANDA
-                    nama = "Darryl M. Immanuel Panggabean" // <-- GANTI DENGAN NAMA ANDA
+                    nim = "245150400111056",
+                    nama = "Darryl M. Immanuel Panggabean"
                 )
             }
         }
     }
 }
 
-// FUNGSI INI DIUBAH TOTAL
-// Dari yang tadinya bernama 'Greeting' menjadi 'TampilanDataMahasiswa'
-// dan sekarang menerima nim dan nama.
 @Composable
 fun TampilanDataMahasiswa(nim: String, nama: String, modifier: Modifier = Modifier) {
     // Column digunakan untuk menyusun elemen secara vertikal (atas ke bawah)
@@ -55,7 +51,6 @@ fun TampilanDataMahasiswa(nim: String, nama: String, modifier: Modifier = Modifi
     }
 }
 
-// FUNGSI PREVIEW INI JUGA DIUBAH
 // Untuk menampilkan fungsi TampilanDataMahasiswa di panel preview
 @Preview(showBackground = true)
 @Composable
